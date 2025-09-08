@@ -33,7 +33,7 @@ section {
   padding: 60px 0;
 }
 .hero-content {
-  max-width: 600px;
+  max-width: 480px; /* Reduced max-width to squish text box */
   margin-left: 40px;
   margin-right: auto;
   padding: 0 20px;
@@ -181,6 +181,7 @@ header.scrolled .header-cta-button {
 
 /* Responsive */
 @media (max-width: 600px) {
+  .hero-content { max-width: 90%; margin-left: auto; margin-right: auto; }
   .hero-content h1 { font-size: 2em; }
   .hero-content p { font-size: 1.2em; }
   header { flex-direction: column; text-align: center; font-size: 1em; }

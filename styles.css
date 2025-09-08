@@ -35,92 +35,82 @@ section {
 }
 
 /* Hero Section Styles */
-/* This section is the big black area with the main message and button */
 .hero {
-  background: #000;         /* Solid black background */
-  padding: 60px 0;          /* Space above and below */
-  /* No text-align here so content aligns left by default */
+  background: #000;
+  padding: 60px 0;
 }
 
-/* Content inside the hero section */
 .hero-content {
-  max-width: 600px;         /* Limit width for easier reading */
-  margin-left: 40px;        /* Move content to the left side */
-  margin-right: auto;       /* Align left */
-  padding: 0 20px;          /* Space on the left and right */
+  max-width: 600px;
+  margin-left: 40px;
+  margin-right: auto;
+  padding: 0 20px;
 }
 
-/* Heading uses Proxima Nova, white text, not bold */
 .hero-content h1 {
   font-family: 'Proxima Nova', Arial, sans-serif;
-  font-size: 2.5em;      /* Make the heading much bigger */
+  font-size: 2.5em;
   font-weight: normal;
   margin-bottom: 1rem;
-  color: #fff;              /* White text for contrast */
-  text-align: left;         /* Align heading to the left */
-  line-height: 1;        /* Squish lines closer together */
-  letter-spacing: -1px;  /* Bring letters closer together */
-  word-break: break-word;/* Allow text to wrap to more lines */
+  color: #fff;
+  text-align: left;
+  line-height: 1;
+  letter-spacing: -1px;
+  word-break: break-word;
 }
 
-/* Subheading uses Georgia, white text */
 .hero-content p {
   font-family: Georgia, serif;
   font-size: 1.2em;
   margin-bottom: 1.5rem;
-  color: #fff;              /* White text for contrast */
-  text-align: left;         /* Align subheading to the left */
-  line-height: 1;        /* Squish lines closer together */
-  letter-spacing: -0.5px;/* Bring letters a bit closer */
-  word-break: break-word;/* Allow text to wrap to more lines */
+  color: #fff;
+  text-align: left;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  word-break: break-word;
 }
 
-/* Center the CTA button under the header and subheader */
 .hero-content .cta-button {
-  display: block;           /* Make the button take up the full line */
-  margin: 24px auto 0 auto; /* Center the button horizontally */
-  text-align: center;       /* Center the text inside the button */
-  width: fit-content;       /* Button only as wide as its content */
+  display: block;
+  margin: 24px auto 0 auto;
+  text-align: center;
+  width: fit-content;
   background-color: #FFC907;
-  color: #fff; /* Make hero CTA button text white */
+  color: #fff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   font-weight: normal;
   border-radius: 5px;
   font-family: 'Proxima Nova', Arial, sans-serif;
   font-size: 1em;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Change button color when hovered */
 .hero-content .cta-button:hover {
-  background-color: #ffda44;
+  background-color: #8BD1CB;
+  color: #000;
 }
 
-/* Story Section Styles */
 .story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
+  background-color: #8BD1CB;
   color: #222;
   text-align: center;
   padding: 30px 20px;
 }
 
-/* Add accent color to section headings */
 h2 {
-  color: #2E9DF7; /* Primary blue */
+  color: #2E9DF7;
   margin-top: 0;
   font-weight: bold;
 }
 
-/* Call-to-Action Section Styles */
 .call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
+  background-color: #FFC907;
   color: #222;
   text-align: center;
   padding: 30px 20px;
 }
 
-/* Style the impact story image */
 .impact-image {
   width: 100%;
   max-width: 320px;
@@ -129,10 +119,9 @@ h2 {
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
 
-/* Donate Button Styles */
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53; /* Green */
+  background-color: #4FCB53;
   color: #fff;
   padding: 14px 32px;
   text-decoration: none;
@@ -141,73 +130,57 @@ h2 {
   font-size: 1.1em;
   margin-top: 18px;
   box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s, color 0.3s;
   border: none;
   cursor: pointer;
 }
 
-/* Change button color when hovered */
 .donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+  background-color: #8BD1CB;
+  color: #000;
+  transform: translateY(-2px) scale(1.04);
 }
 
-/* Add some spacing between sections */
 section {
   margin-bottom: 20px;
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
 @media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
   .hero {
     padding: 32px 8px;
     font-size: 1em;
   }
 
-  /* Make headline font size smaller so it fits on small screens */
   .hero h1 {
     font-size: 1.4em;
   }
 
-  /* Make subheadline font size smaller */
   .hero p {
     font-size: 1em;
   }
 
-  /* Make story and call-to-action sections have less padding */
   .story,
   .call-to-action,
   .donation-section {
     padding: 14px 8px;
   }
 
-  /* Make impact story image smaller and stack above the text */
   .impact-content {
-    display: block; /* Stack items vertically */
+    display: block;
     text-align: center;
   }
 
   .impact-image {
-    width: 90%;    /* Make image take up most of the width */
+    width: 90%;
     max-width: 220px;
   }
 
-  /* Hide the full text and show "track" only */
   .header-cta-button {
     font-size: 1em;
     padding: 0.5rem 1rem;
     width: 100%;
     text-align: center;
-    /* Use a data attribute for the short label if possible */
   }
-  /* Hide the long text and show the short text using a span */
   .header-cta-button .full-text {
     display: none;
   }
@@ -216,14 +189,12 @@ section {
   }
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
 @media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
   .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
     text-align: left;
     max-width: 800px;
     margin: 0 auto;
@@ -235,52 +206,46 @@ section {
 }
 
 body {
-      margin: 0;
-      font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
-      color: #fff;
-      background-color: #000;
-    }
+  margin: 0;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+}
 
-/* Header styles for logo and CTA button */
 header {
-  /* Use simple float layout for beginners */
   padding: 16px 10px;
   background: #fff;
-  overflow: auto; /* Clear floats */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #eee;
 }
 
-/* Logo on the left */
 header img {
-  float: left; /* Logo stays on the left */
-  height: 60px; /* Make the logo image bigger */
+  height: 60px;
 }
 
-/* CTA button in the header */
 .header-cta-button {
-  float: right; /* Button stays on the right */
   background-color: #FFC907;
-  color: #fff; /* Make header CTA button text white */
-  padding: 0.75rem 1.5rem;             /* Same padding as hero button */
-  border-radius: 5px;                  /* Rounded corners */
-  text-decoration: none;               /* No underline */
-  font-family: 'Proxima Nova', Arial, sans-serif; /* Same font */
-  font-weight: normal;                 /* Not bold */
-  font-size: 1em;                      /* Same font size as hero button */
-  transition: background 0.3s;         /* Smooth hover effect */
-  border: none;                        /* No border */
-  cursor: pointer;                     /* Pointer cursor on hover */
-  white-space: nowrap;                 /* Prevent text from wrapping */
-  display: inline-block;               /* Align like a button */
-  margin-top: 6px;                     /* Align with logo */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  transition: background 0.3s, color 0.3s;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
 }
 
-/* Change button color when hovered */
 .header-cta-button:hover {
-  background-color: #ffda44;
+  background-color: #8BD1CB;
+  color: #000;
 }
 
-/* Always show the full text on the CTA button */
 .header-cta-button .short-text {
   display: none;
 }
@@ -288,22 +253,18 @@ header img {
   display: inline;
 }
 
-/* Responsive styles for small screens */
 @media (max-width: 600px) {
-  /* Stack header items vertically for small screens */
-  header img,
-  .header-cta-button {
-    float: none;        /* Remove floats */
-    display: block;     /* Stack vertically */
-    margin: 0 auto;     /* Center horizontally */
+  header {
+    flex-direction: column;
     text-align: center;
   }
-  .header-cta-button {
-    margin-top: 10px;
-    width: 90%;
-    font-size: 1em;
+  header img {
+    margin-bottom: 10px;
   }
-  /* Always show the full text, never the short text */
+  .header-cta-button {
+    width: 90%;
+    margin-top: 10px;
+  }
   .header-cta-button .full-text {
     display: inline;
   }
@@ -311,5 +272,3 @@ header img {
     display: none;
   }
 }
-
-/* ...rest of your beginner-friendly CSS... */

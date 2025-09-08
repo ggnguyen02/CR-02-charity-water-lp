@@ -1,55 +1,46 @@
-/* charity: water Brand Colors & Fonts
-
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
-
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
-
-Fonts:
-- Proxima Nova
-- Avenir
-
-*/
-
-/* 
-  Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
-*/
-
-/* Set up the main font and background color for the whole page */
-/* Add a slight shadow and rounded corners to each section for depth */
-
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+/* Primary and secondary colors */
+:root {
+  --yellow: #FFC907;
+  --blue: #2E9DF7;
+  --light-blue: #8BD1CB;
+  --green: #4FCB53;
+  --orange: #FF902A;
+  --red: #F5402C;
+  --dark-green: #159A48;
+  --pink: #F16061;
 }
 
-/* Hero Section Styles */
+/* General body styles */
+body {
+  margin: 0;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07);
+  margin: 24px 10px;
+  padding: 24px 16px;
+  margin-bottom: 20px;
+}
+
+/* Hero section */
 .hero {
   background: #000;
   padding: 60px 0;
 }
-
 .hero-content {
   max-width: 600px;
   margin-left: 40px;
   margin-right: auto;
   padding: 0 20px;
 }
-
 .hero-content h1 {
   font-family: 'Proxima Nova', Arial, sans-serif;
-  font-size: 2.5em;
+  font-size: 3em;
   font-weight: normal;
   margin-bottom: 1rem;
   color: #fff;
@@ -57,25 +48,23 @@ section {
   line-height: 1;
   letter-spacing: -1px;
   word-break: break-word;
+  transition: font-size 0.3s ease;
 }
-
 .hero-content p {
   font-family: Georgia, serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-bottom: 1.5rem;
   color: #fff;
   text-align: left;
   line-height: 1;
   letter-spacing: -0.5px;
-  word-break: break-word;
 }
-
 .hero-content .cta-button {
   display: block;
   margin: 24px auto 0 auto;
   text-align: center;
   width: fit-content;
-  background-color: #FFC907;
+  background-color: var(--yellow);
   color: #fff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
@@ -85,32 +74,30 @@ section {
   font-size: 1em;
   transition: background 0.3s, color 0.3s;
 }
-
 .hero-content .cta-button:hover {
-  background-color: #8BD1CB;
+  background-color: var(--light-blue);
   color: #000;
 }
 
+/* Story section */
 .story {
-  background-color: #8BD1CB;
+  background-color: var(--light-blue);
   color: #222;
   text-align: center;
   padding: 30px 20px;
 }
-
 h2 {
-  color: #2E9DF7;
+  color: var(--blue);
   margin-top: 0;
   font-weight: bold;
 }
 
 .call-to-action {
-  background-color: #FFC907;
+  background-color: var(--yellow);
   color: #222;
   text-align: center;
   padding: 30px 20px;
 }
-
 .impact-image {
   width: 100%;
   max-width: 320px;
@@ -118,10 +105,9 @@ h2 {
   margin-bottom: 16px;
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
-
 .donate-button {
   display: inline-block;
-  background-color: #4FCB53;
+  background-color: var(--green);
   color: #fff;
   padding: 14px 32px;
   text-decoration: none;
@@ -134,99 +120,32 @@ h2 {
   border: none;
   cursor: pointer;
 }
-
 .donate-button:hover {
-  background-color: #8BD1CB;
+  background-color: var(--light-blue);
   color: #000;
   transform: translateY(-2px) scale(1.04);
 }
 
-section {
-  margin-bottom: 20px;
-}
-
-@media (max-width: 600px) {
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  .impact-content {
-    display: block;
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;
-    max-width: 220px;
-  }
-
-  .header-cta-button {
-    font-size: 1em;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    text-align: center;
-  }
-  .header-cta-button .full-text {
-    display: none;
-  }
-  .header-cta-button .short-text {
-    display: inline;
-  }
-}
-
-@media (min-width: 601px) {
-  .impact-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .impact-image {
-    width: 300px;
-  }
-}
-
-body {
-  margin: 0;
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
-  color: #fff;
-  background-color: #000;
-}
-
+/* Header */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   padding: 16px 10px;
   background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease, font-size 0.3s ease;
+  font-size: 1.2em;
 }
-
 header img {
   height: 60px;
+  transition: height 0.3s ease;
 }
-
 .header-cta-button {
-  background-color: #FFC907;
+  background-color: var(--yellow);
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
@@ -234,41 +153,37 @@ header img {
   font-family: 'Proxima Nova', Arial, sans-serif;
   font-weight: normal;
   font-size: 1em;
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, padding 0.3s ease, font-size 0.3s ease;
   border: none;
   cursor: pointer;
   white-space: nowrap;
   display: inline-block;
 }
-
 .header-cta-button:hover {
-  background-color: #8BD1CB;
+  background-color: var(--light-blue);
   color: #000;
 }
 
-.header-cta-button .short-text {
-  display: none;
+/* Scrolled header */
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 8px 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 1.1em;
 }
-.header-cta-button .full-text {
-  display: inline;
+header.scrolled img {
+  height: 45px;
+}
+header.scrolled .header-cta-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9em;
 }
 
+/* Responsive */
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  header img {
-    margin-bottom: 10px;
-  }
-  .header-cta-button {
-    width: 90%;
-    margin-top: 10px;
-  }
-  .header-cta-button .full-text {
-    display: inline;
-  }
-  .header-cta-button .short-text {
-    display: none;
-  }
+  .hero-content h1 { font-size: 2em; }
+  .hero-content p { font-size: 1.2em; }
+  header { flex-direction: column; text-align: center; font-size: 1em; }
+  header img { margin-bottom: 10px; }
+  .header-cta-button { width: 90%; margin-top: 10px; font-size: 0.9em; }
 }

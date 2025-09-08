@@ -24,15 +24,8 @@ Fonts:
 */
 
 /* Set up the main font and background color for the whole page */
-body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #222;
-}
-
 /* Add a slight shadow and rounded corners to each section for depth */
+
 section {
   background: #fff; /* White background for sections */
   border-radius: 12px; /* Rounded corners */
@@ -42,38 +35,66 @@ section {
 }
 
 /* Hero Section Styles */
+/* This section is the big black area with the main message and button */
 .hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+  background: #000;         /* Solid black background */
+  padding: 60px 0;          /* Space above and below */
+  /* No text-align here so content aligns left by default */
 }
 
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+/* Content inside the hero section */
+.hero-content {
+  max-width: 600px;         /* Limit width for easier reading */
+  margin-left: 40px;        /* Move content to the left side */
+  margin-right: auto;       /* Align left */
+  padding: 0 20px;          /* Space on the left and right */
 }
 
-/* Style the subheadline */
-.hero p {
+/* Heading uses Proxima Nova, white text, not bold */
+.hero-content h1 {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 2.5em;      /* Make the heading much bigger */
+  font-weight: normal;
+  margin-bottom: 1rem;
+  color: #fff;              /* White text for contrast */
+  text-align: left;         /* Align heading to the left */
+  line-height: 1;        /* Squish lines closer together */
+  letter-spacing: -1px;  /* Bring letters closer together */
+  word-break: break-word;/* Allow text to wrap to more lines */
+}
+
+/* Subheading uses Georgia, white text */
+.hero-content p {
+  font-family: Georgia, serif;
   font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+  margin-bottom: 1.5rem;
+  color: #fff;              /* White text for contrast */
+  text-align: left;         /* Align subheading to the left */
+  line-height: 1;        /* Squish lines closer together */
+  letter-spacing: -0.5px;/* Bring letters a bit closer */
+  word-break: break-word;/* Allow text to wrap to more lines */
+}
+
+/* Center the CTA button under the header and subheader */
+.hero-content .cta-button {
+  display: block;           /* Make the button take up the full line */
+  margin: 24px auto 0 auto; /* Center the button horizontally */
+  text-align: center;       /* Center the text inside the button */
+  width: fit-content;       /* Button only as wide as its content */
+  background-color: #FFC907;
+  color: #fff; /* Make hero CTA button text white */
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: normal;
+  border-radius: 5px;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+
+/* Change button color when hovered */
+.hero-content .cta-button:hover {
+  background-color: #ffda44;
 }
 
 /* Story Section Styles */
@@ -177,6 +198,22 @@ section {
     width: 90%;    /* Make image take up most of the width */
     max-width: 220px;
   }
+
+  /* Hide the full text and show "track" only */
+  .header-cta-button {
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+    /* Use a data attribute for the short label if possible */
+  }
+  /* Hide the long text and show the short text using a span */
+  .header-cta-button .full-text {
+    display: none;
+  }
+  .header-cta-button .short-text {
+    display: inline;
+  }
 }
 
 /* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
@@ -196,3 +233,83 @@ section {
     width: 300px;
   }
 }
+
+body {
+      margin: 0;
+      font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+      color: #fff;
+      background-color: #000;
+    }
+
+/* Header styles for logo and CTA button */
+header {
+  /* Use simple float layout for beginners */
+  padding: 16px 10px;
+  background: #fff;
+  overflow: auto; /* Clear floats */
+  border-bottom: 1px solid #eee;
+}
+
+/* Logo on the left */
+header img {
+  float: left; /* Logo stays on the left */
+  height: 60px; /* Make the logo image bigger */
+}
+
+/* CTA button in the header */
+.header-cta-button {
+  float: right; /* Button stays on the right */
+  background-color: #FFC907;
+  color: #fff; /* Make header CTA button text white */
+  padding: 0.75rem 1.5rem;             /* Same padding as hero button */
+  border-radius: 5px;                  /* Rounded corners */
+  text-decoration: none;               /* No underline */
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Same font */
+  font-weight: normal;                 /* Not bold */
+  font-size: 1em;                      /* Same font size as hero button */
+  transition: background 0.3s;         /* Smooth hover effect */
+  border: none;                        /* No border */
+  cursor: pointer;                     /* Pointer cursor on hover */
+  white-space: nowrap;                 /* Prevent text from wrapping */
+  display: inline-block;               /* Align like a button */
+  margin-top: 6px;                     /* Align with logo */
+}
+
+/* Change button color when hovered */
+.header-cta-button:hover {
+  background-color: #ffda44;
+}
+
+/* Always show the full text on the CTA button */
+.header-cta-button .short-text {
+  display: none;
+}
+.header-cta-button .full-text {
+  display: inline;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 600px) {
+  /* Stack header items vertically for small screens */
+  header img,
+  .header-cta-button {
+    float: none;        /* Remove floats */
+    display: block;     /* Stack vertically */
+    margin: 0 auto;     /* Center horizontally */
+    text-align: center;
+  }
+  .header-cta-button {
+    margin-top: 10px;
+    width: 90%;
+    font-size: 1em;
+  }
+  /* Always show the full text, never the short text */
+  .header-cta-button .full-text {
+    display: inline;
+  }
+  .header-cta-button .short-text {
+    display: none;
+  }
+}
+
+/* ...rest of your beginner-friendly CSS... */

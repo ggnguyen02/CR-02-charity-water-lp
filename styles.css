@@ -138,15 +138,16 @@ header img {
   white-space: nowrap;
   display: inline-block;
   flex-shrink: 0;
+  text-align: center;
 }
 .header-cta-button:hover { background-color: var(--light-blue); color: #000; }
 
-/* Responsive: move button below logo and resize logo on small screens */
+/* Responsive: wrap button below logo and center it on small screens */
 @media (max-width: 600px) {
   .hero-content { max-width: 90%; margin-left: auto; margin-right: auto; }
   .hero-content h1 { font-size: 2em; }
   .hero-content p { font-size: 1.2em; }
   header { flex-direction: column; text-align: center; }
   header img { margin-bottom: 10px; height: 40px; }
-  .header-cta-button { width: 90%; margin-top: 10px; font-size: 0.9em; }
+  .header-cta-button { width: 90%; margin: 10px auto 0 auto; font-size: 0.9em; }
 }

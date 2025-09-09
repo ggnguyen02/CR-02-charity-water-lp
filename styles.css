@@ -27,12 +27,28 @@ section {
   margin-bottom: 20px;
 }
 
-/* Hero section */
+/* Hero section with background image */
 .hero {
-  background: #000;
+  background-image: url('https://cdn2.dropmarkusercontent.com/52043/e81bc77957f16a7e4b6308fed5816d1aab58afb3/preview/JS_20170803_2859.jpg?Expires=1757379521&Signature=dtHcO~8NLZPBSfHj6FSCs~2cvf0x1PeKzQQCV6fQYGOCCV9-PE0Ca-ItF-kNE8N6qZPuJQJops3V2lFn-JBoHV0sogkKH5doT~VCSHfqdpO~qkgT9mfLtvQmvTJPrapg5DwaZm-2ZN-hX~jZihVK2dabAaydJLtEl55noxy-AXQORgJBgSn-QjE6Hq2978a1vfR9xssxoQ5SZX5fLtd2K4uIevjZX8c5ChRXGswor3e0XewYLLSBPO8wyXRgcfl5b~hr~mnoypE5nGzwCg76V~F1Bz26vavdeq1bCi6MuJDdNypMkzJXhEdA8POUFcFicG8zV8m3obJMQILNnRRbqg__&Key-Pair-Id=APKAITQYWVEN757ZA4KQ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 60px 0;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 .hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 480px; /* Reduced max-width to squish text box */
   margin-left: 40px;
   margin-right: auto;

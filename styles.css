@@ -114,6 +114,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
 }
 header img {
   height: 60px;
@@ -136,7 +137,7 @@ header img {
   cursor: pointer;
   white-space: nowrap;
   display: inline-block;
-  margin-left: auto;
+  flex-shrink: 0;
 }
 .header-cta-button:hover { background-color: var(--light-blue); color: #000; }
 
@@ -147,5 +148,5 @@ header img {
   .hero-content p { font-size: 1.2em; }
   header { flex-direction: column; text-align: center; }
   header img { margin-bottom: 10px; height: 40px; }
-  .header-cta-button { width: 90%; margin-top: 10px; font-size: 0.9em; margin-left: 0; margin-right: 0; }
+  .header-cta-button { width: 90%; margin-top: 10px; font-size: 0.9em; }
 }
